@@ -1,0 +1,51 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+    // Project of snake , water , Gun
+    
+    srand(time(0));
+    int player , computer = rand() % 3;
+    // 0 --> Snake 
+    // 1 --> Water
+    // 2 --> Gun
+    printf("Enter 0 for snake , 1 for water and 2 for Gun : \n");
+    scanf("%d",&player);
+    printf("%d\n",computer);
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            if (i==j){
+                if (player == i && computer == j) {
+                    printf("Its a Draw ! \n");
+                }
+            }
+        }  
+    }
+    if (player == 0 && computer == 1){
+        printf("You Win ! \n");
+    }
+    else if(player == 0 && computer == 2){
+        printf("You Lose ! \n");
+    }
+    else if(player == 1 && computer == 0){
+        printf("You Lose ! \n");
+    }
+    else if(player == 1 && computer == 2){
+        printf("You Win ! \n");
+    }
+    else if(player == 2 && computer == 0){
+        printf("You Win ! \n");
+    }
+    else if(player == 2 && computer == 1){
+        printf("You Lose ! \n");
+    }
+    
+
+    
+
+    
+    return 0;
+}
