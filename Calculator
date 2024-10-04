@@ -1,0 +1,60 @@
+ printf("INSTRCUCTIONS FOR USING CALCULATOR: \n");
+    printf("Enter\n 1 for + \n 2 for - \n 3 for * \n 4 for / \n 5 for sqrt \n 6 for a^b \n 7 for sin() \n 8 for cos() \n 9 for tan() \n 10 for e^x \n 11 for ln() \n");
+    int ch = 1;
+    while(ch){
+        int a;
+        int b;
+        printf("Enter two numbers to perform arithemetic operations : \n");
+        scanf("%d",&a);
+        scanf("%d",&b);
+        int Operator;
+        printf("Enter your Choice : \n");
+        scanf("%d",&Operator);
+        switch(Operator){
+            case 1:
+                printf("%d + %d = %d: \n",a,b,a+b);
+                break;
+            case 2:
+                printf("%d - %d = %d: \n",a,b,a-b);
+                break;
+            case 3:
+                printf("%d * %d = %d: \n",a,b,a*b);
+                break;
+            case 4:
+                printf("%d / %d = %d: \n",a,b,a/b);
+                break;
+            case 5:
+                printf("Underoot of %d = %.2lf : \n",a,sqrt(a));
+                printf("Underoot of %d = %.2lf : \n",b,sqrt(b));
+                break;
+            case 6:
+                printf("%d ^ %d = %.2lf: \n",a,b,pow(a,b));
+                break;
+            case 7:
+                printf("Sin(%d) = %lf : \n",a,sin(a));
+                printf("Sin(%d) = %lf : \n",b,sin(b));
+                break;
+            case 8:
+                printf("Cos(%d) = %lf : \n",a,cos(a));
+                printf("Cos(%d) = %lf : \n",b,cos(b));
+                break;
+            case 9:
+                printf("Tan(%d) = %lf : \n",a,tan(a));
+                printf("Tan(%d) = %lf : \n",b,tan(b));
+                break;
+            case 10:
+                printf("e^%d = %f: \n",a,exp(a));
+                printf("e^%d = %f: \n",b,exp(b));
+                break;
+            case 11:
+                printf("log(%d) = %lf : \n",a,log(a));
+                printf("log(%d) = %lf : \n",b,log(b));
+                break;
+            default:
+                printf("Inavalid Operator! \n");
+        }
+        printf("Do you want to perform more operations? If yes then type 1 otherwise type 0 : \n");
+        scanf("%d",&ch);
+    }
+    return 0;
+}
